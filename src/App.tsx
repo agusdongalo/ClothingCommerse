@@ -359,7 +359,7 @@ export default function App() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.95)_0%,rgba(0,0,0,0.75)_40%,rgba(0,0,0,0.45)_70%,rgba(0,0,0,0.30)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_72%,rgba(184,255,25,0.22),transparent_30%),linear-gradient(180deg,transparent_70%,#050505_100%)]" />
         <div className="relative z-10 mx-auto grid min-h-screen max-w-[1800px] px-5 pb-12 pt-28 sm:px-8 lg:h-full lg:grid-cols-[1fr_0.55fr] lg:gap-10 lg:px-10 lg:pt-24 lg:pb-8">
-          <div className="flex flex-col justify-end">
+          <div className="flex flex-col justify-end max-[767px]:pb-14">
             <p className="reveal-up mb-4 font-display headline-stroke text-4xl uppercase leading-[0.78] tracking-[-0.08em] text-white sm:text-6xl lg:text-7xl">
               Noir<span className="text-[#b8ff19]">//</span>Volt
             </p>
