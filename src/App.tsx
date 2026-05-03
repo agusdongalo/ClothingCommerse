@@ -246,8 +246,8 @@ export default function App() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#050505] text-zinc-100 selection:bg-[#b8ff19] selection:text-black">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/45 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-[1800px] items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
-          <a href="#top" className="font-display text-xl uppercase tracking-[-0.04em] text-white">
+        <nav className="mx-auto flex max-w-[1800px] items-center justify-between px-4 py-4 sm:px-8 lg:px-10 max-[380px]:px-3">
+          <a href="#top" className="font-display text-lg uppercase tracking-[-0.04em] text-white max-[380px]:text-base">
             Noir<span className="text-[#b8ff19]">//</span>Volt
           </a>
           <div className="hidden items-center gap-8 text-xs font-black uppercase tracking-[0.22em] text-zinc-300 md:flex">
@@ -257,21 +257,21 @@ export default function App() {
             <a className="transition hover:text-[#b8ff19]" href="#about">About</a>
             <a className="transition hover:text-[#b8ff19]" href="#inquire">Inquire</a>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-nowrap items-center gap-3 max-[380px]:gap-2">
             <button
               type="button"
               onClick={() => setIsCartOpen((isOpen) => !isOpen)}
-              className="hidden neon-outline px-4 py-2 text-xs font-black uppercase tracking-[0.18em] sm:inline-flex"
+              className="hidden neon-outline px-4 py-2 text-xs font-black uppercase tracking-[0.18em] md:inline-flex"
             >
               Cart ({totalItems})
             </button>
-            <a className="neon-fill px-5 py-2 text-xs font-black uppercase tracking-[0.18em]" href="#/login">
+            <a className="neon-fill whitespace-nowrap px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] max-[380px]:px-3 max-[380px]:text-[10px]" href="#/login">
               Login
             </a>
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen((open) => !open)}
-              className="inline-flex h-9 w-9 items-center justify-center border border-[#b8ff19] text-[#b8ff19] transition hover:bg-[#b8ff19] hover:text-black md:hidden"
+              className="inline-flex h-9 w-9 items-center justify-center border border-[#b8ff19] text-[#b8ff19] transition hover:bg-[#b8ff19] hover:text-black max-[380px]:h-8 max-[380px]:w-8 md:hidden"
               aria-label="Toggle mobile menu"
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-shortcuts"
@@ -350,7 +350,7 @@ export default function App() {
         </div>
       )}
 
-      <section id="top" className="hero-grid relative min-h-screen bg-black">
+      <section id="top" className="hero-grid relative min-h-screen overflow-hidden bg-black lg:h-screen">
         <img
           src="/images/hero-streetwear.jpg"
           alt="Model wearing oversized black streetwear in a neon-lit urban underpass"
@@ -358,8 +358,8 @@ export default function App() {
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.95)_0%,rgba(0,0,0,0.75)_40%,rgba(0,0,0,0.45)_70%,rgba(0,0,0,0.30)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_72%,rgba(184,255,25,0.22),transparent_30%),linear-gradient(180deg,transparent_70%,#050505_100%)]" />
-        <div className="relative z-10 mx-auto grid min-h-screen max-w-[1800px] px-5 pb-12 pt-28 sm:px-8 lg:grid-cols-[1fr_0.55fr] lg:gap-10 lg:px-10 lg:pb-16">
-          <div className="flex flex-col justify-end lg:pb-10">
+        <div className="relative z-10 mx-auto grid min-h-screen max-w-[1800px] px-5 pb-12 pt-28 sm:px-8 lg:h-full lg:grid-cols-[1fr_0.55fr] lg:gap-10 lg:px-10 lg:pt-24 lg:pb-8">
+          <div className="flex flex-col justify-end">
             <p className="reveal-up mb-4 font-display headline-stroke text-4xl uppercase leading-[0.78] tracking-[-0.08em] text-white sm:text-6xl lg:text-7xl">
               Noir<span className="text-[#b8ff19]">//</span>Volt
             </p>
@@ -371,14 +371,14 @@ export default function App() {
               we're culture
             </h1>
             <div className="reveal-up mt-8 flex max-w-3xl flex-col gap-5 delay-200 sm:flex-row sm:items-end sm:justify-between lg:flex-col lg:items-start lg:justify-start">
-              <p className="max-w-xl text-sm font-semibold uppercase leading-relaxed tracking-[0.08em] text-zinc-200 sm:text-base">
+              <p className="max-w-xl text-sm font-semibold uppercase leading-relaxed tracking-[0.08em] text-zinc-200 max-[380px]:text-xs sm:text-base">
                 Limited-run streetwear made for warehouse nights, subway platforms, and the ones who set the temperature.
               </p>
-              <div className="flex gap-3">
-                <a className="neon-fill w-[168px] justify-center px-6 py-3 text-xs font-black uppercase tracking-[0.18em]" href="#/login">
+              <div className="grid w-full max-w-[340px] grid-cols-2 gap-3 sm:max-w-none sm:w-auto lg:flex">
+                <a className="neon-fill w-full justify-center px-3 py-3 text-[11px] font-black uppercase tracking-[0.16em] sm:px-6 sm:text-xs lg:w-[168px] lg:tracking-[0.18em]" href="#/login">
                   Shop Now
                 </a>
-                <a className="neon-outline w-[168px] justify-center px-6 py-3 text-xs font-black uppercase tracking-[0.18em]" href="#inquire">
+                <a className="neon-outline w-full justify-center px-3 py-3 text-[11px] font-black uppercase tracking-[0.16em] sm:px-6 sm:text-xs lg:w-[168px] lg:tracking-[0.18em]" href="#inquire">
                   Inquire Now
                 </a>
               </div>

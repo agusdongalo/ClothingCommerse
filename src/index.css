@@ -114,7 +114,7 @@ body {
 
 @keyframes slowBurn {
   from {
-    transform: scale(1.08);
+    transform: scale(1.02);
     filter: saturate(0.85) contrast(1.02);
   }
   to {
