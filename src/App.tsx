@@ -292,16 +292,6 @@ export default function App() {
               <a className="transition hover:text-[#b8ff19]" href="#shop" onClick={() => setIsMobileMenuOpen(false)}>Shop</a>
               <a className="transition hover:text-[#b8ff19]" href="#about" onClick={() => setIsMobileMenuOpen(false)}>About</a>
               <a className="transition hover:text-[#b8ff19]" href="#inquire" onClick={() => setIsMobileMenuOpen(false)}>Inquire</a>
-              <button
-                type="button"
-                onClick={() => {
-                  setIsCartOpen(true);
-                  setIsMobileMenuOpen(false);
-                }}
-                className="w-fit border border-[#b8ff19] px-3 py-2 text-left text-[#b8ff19] transition hover:bg-[#b8ff19] hover:text-black"
-              >
-                Cart ({totalItems})
-              </button>
             </div>
           </div>
         )}
@@ -394,7 +384,7 @@ export default function App() {
               </div>
             </div>
           </div>
-          <aside className="hidden lg:flex lg:flex-col lg:justify-end">
+          <aside className="hidden lg:flex lg:flex-col lg:justify-start">
             <div className="ml-auto w-full max-w-[560px] lg:mr-6">
               <div className="relative overflow-hidden border border-white/15 bg-black/50">
                 <img
@@ -409,7 +399,7 @@ export default function App() {
         </div>
       </section>
 
-      <section id="collections" className="mx-auto max-w-[1800px] px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+      <section id="collections" className="mx-auto max-w-[1800px] px-5 pt-8 pb-20 sm:px-8 lg:px-10 lg:pt-12 lg:pb-28">
         <div className="mb-10 grid gap-6 lg:grid-cols-[0.92fr_1fr] lg:items-end">
           <h2 className="font-display headline-stroke text-5xl uppercase leading-[0.82] tracking-[-0.07em] sm:text-7xl lg:text-[6.2rem]">
             Featured collections
@@ -557,7 +547,12 @@ export default function App() {
           <div className="space-y-3 text-xs font-black uppercase tracking-[0.18em] text-zinc-300 lg:text-right">
             <p>contact@noirvolt.studio</p>
             <p>+1 (212) 555-0198</p>
-            <a className="neon-outline inline-flex w-fit px-6 py-3 text-xs font-black uppercase tracking-[0.18em]" href="mailto:contact@noirvolt.studio">
+            <a
+              className="neon-outline inline-flex w-fit px-6 py-3 text-xs font-black uppercase tracking-[0.18em]"
+              href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWrRvwThvJfgNzflMXWFZRwqNgtwfCJHTKRkJmNgqZPlnlwPGdwRHMthrCRknxnkDDLXFZGPb"
+              target="_blank"
+              rel="noreferrer"
+            >
               Send Inquiry
             </a>
           </div>
